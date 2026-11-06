@@ -1,0 +1,68 @@
+@startuml c4-container-deposit-mvp
+!include <C4/C4_Container>
+
+title Открытие депозитов онлайн, MVP: диаграмма контейнеров (C4, уровень 2)
+
+AddElementTag("new", $bgColor="#1E8449", $fontColor="#FFFFFF", $borderColor="#14572F", $legendText="Новый контейнер")
+AddElementTag("changed", $bgColor="#1F5AC8", $fontColor="#FFFFFF", $borderColor="#123B86", $legendText="Контейнер или система, которые меняются")
+AddElementTag("same", $bgColor="#8A8A8A", $fontColor="#FFFFFF", $borderColor="#5E5E5E", $legendText="Без изменений")
+AddElementTag("ext", $bgColor="#6B4E9B", $fontColor="#FFFFFF", $borderColor="#4A3570", $legendText="Внешняя система")
+
+Person(newClient, "Новый клиент", "")
+Person(client, "Клиент банка", "")
+Person(office, "Сотрудники банка", "Отделение, бэк-офис депозитов и кредитов")
+Person(operator, "Оператор кол-центра", "")
+
+System(site, "Сайт", "PHP, React.js. Каталог и форма заявки", $tags="changed")
+
+System_Boundary(ibb, "Интернет-банк") {
+  Container(lb, "Балансировщик и API-шлюз", "NGINX, в обоих ЦОД", "TLS, маршрутизация, ограничение частоты запросов", $tags="new")
+  Container(web, "Веб-приложение интернет-банка", "ASP.NET MVC 4.5", "Вход клиента, новые экраны депозитов", $tags="changed")
+  ContainerDb(webDb, "БД интернет-банка", "MS SQL", "Клиенты, счета, платежи", $tags="same")
+  Container(dep, "Сервис депозитов", "ASP.NET Core, в обоих ЦОД", "Каталог, персональные ставки, приём заявок, статусы", $tags="new")
+  ContainerDb(depDb, "БД сервиса депозитов", "MS SQL Always On", "Копия ставок, заявки, исходящие события", $tags="new")
+  Container(sms, "Сервис СМС", "ASP.NET Core, в обоих ЦОД", "Выдача и проверка кодов, уведомления", $tags="new")
+  ContainerDb(smsDb, "БД сервиса СМС", "MS SQL Always On", "Коды и журнал отправок", $tags="new")
+}
+
+ContainerQueue(kafka, "Kafka", "Кластер на два ЦОД", "Топики: ставки, заявки, статусы, уведомления", $tags="new")
+
+System_Boundary(absb, "АБС") {
+  Container(absUi, "Клиент АБС", "Delphi", "Новые экраны: ставки, заявки, согласование", $tags="changed")
+  ContainerDb(absDb, "БД АБС", "Oracle, PL/SQL", "Новые модули: ставки, заявки, исходящие события", $tags="changed")
+  Container(absInt, "Сервис интеграции депозитов", "Java, Spring Boot", "Читает Kafka с ограниченной скоростью, пишет в БД АБС, публикует изменения", $tags="new")
+}
+
+System(cc, "Система кол-центра", "Java, Spring Boot. Новый обработчик заявок с сайта", $tags="changed")
+System(gw, "СМС-шлюз", "", $tags="same")
+System_Ext(tel, "Телеком-оператор", "", $tags="ext")
+
+Rel_D(newClient, site, "UC1, UC2", "HTTPS")
+Rel_D(client, lb, "UC6, UC7", "HTTPS")
+Rel_D(site, lb, "UC1, UC2: каталог, заявка", "REST, HTTPS")
+Rel_D(lb, web, "Экраны", "HTTPS")
+Rel_D(lb, dep, "Запросы сайта", "HTTPS")
+Rel_L(web, webDb, "Счета клиента", "SQL")
+Rel_D(web, dep, "UC6, UC7", "REST")
+Rel_D(dep, depDb, "Чтение и запись", "SQL")
+Rel_L(dep, sms, "UC7: код", "REST")
+Rel_D(sms, smsDb, "Чтение и запись", "SQL")
+
+Rel_R(dep, kafka, "UC2, UC7: заявки", "Kafka")
+Rel_L(kafka, dep, "UC5, UC8: ставки, статусы", "Kafka")
+Rel_U(kafka, sms, "UC9: события для уведомлений", "Kafka")
+Rel_D(sms, gw, "UC7, UC9: коды и уведомления", "Протокол шлюза")
+Rel_L(gw, tel, "СМС")
+
+Rel_D(kafka, absInt, "UC7: заявки из интернет-банка", "Kafka")
+Rel_U(absInt, kafka, "UC5, UC8, UC9: ставки, статусы", "Kafka")
+Rel_D(absInt, absDb, "Запись заявок, чтение исходящих событий", "JDBC, с лимитом")
+Rel_U(office, absUi, "UC4, UC5, UC8")
+Rel_R(absUi, absDb, "Ставки, заявки, депозиты", "SQL")
+
+Rel_R(kafka, cc, "UC3: заявки с сайта", "Kafka")
+Rel_U(operator, cc, "UC3")
+Rel_D(cc, absDb, "UC3, UC4: обращение, особые условия", "Текущая интеграция")
+
+SHOW_LEGEND()
+@enduml

@@ -1,0 +1,78 @@
+@startuml c4-component-credit-online
+!include <C4/C4_Component>
+
+title Заявка на кредит онлайн: диаграмма компонентов (C4, уровень 3)
+
+AddElementTag("new", $bgColor="#1E8449", $fontColor="#FFFFFF", $borderColor="#14572F", $legendText="Новый компонент")
+AddElementTag("changed", $bgColor="#1F5AC8", $fontColor="#FFFFFF", $borderColor="#123B86", $legendText="Компонент, который меняется")
+AddElementTag("same", $bgColor="#8A8A8A", $fontColor="#FFFFFF", $borderColor="#5E5E5E", $legendText="Уже есть в MVP или в системе")
+AddElementTag("ext", $bgColor="#6B4E9B", $fontColor="#FFFFFF", $borderColor="#4A3570", $legendText="Внешняя система")
+
+Person(crManager, "Менеджер кредитов", "")
+Container(web, "Веб-приложение интернет-банка", "ASP.NET MVC 4.5", "Экраны кредитов", $tags="changed")
+System(site, "Сайт", "PHP, React.js. Форма без хранения паспорта", $tags="changed")
+Container(lb, "Балансировщик и API-шлюз", "NGINX", "TLS, ограничение частоты запросов", $tags="same")
+
+Container_Boundary(creditSvc, "Сервис кредитных заявок (ASP.NET Core)") {
+  Component(api, "API заявок и условий", "ASP.NET Core", "Каталог, подача заявки, статус", $tags="new")
+  Component(guard, "Проверка согласия и телефона", "ASP.NET Core", "Согласие на запрос в БКИ, код СМС", $tags="new")
+  Component(appStore, "Хранилище заявок", "MS SQL Always On", "Статусы и исходящие события, паспорт зашифрован", $tags="new")
+  Component(sync, "Обмен событиями", "Confluent .NET Client", "Публикует заявки, получает условия и статусы", $tags="new")
+}
+
+Container(sms, "Сервис СМС", "ASP.NET Core", "Коды и уведомления", $tags="same")
+ContainerQueue(kafka, "Kafka", "Топики credit.*", "Заявки, условия, статусы, результаты скоринга. Доступ разграничен", $tags="same")
+
+Container_Boundary(offer, "Сервис предодобрения (Python, Flask)") {
+  Component(offerConsumer, "Подписчик на результаты", "Python", "Получает результаты уже выполненных скорингов", $tags="new")
+  Component(offerCalc, "Расчёт предложения", "Python", "Сумма и срок действия по правилам кредитования", $tags="new")
+  Component(offerApi, "API предложений", "Flask", "Отдаёт предложение клиенту интернет-банка", $tags="new")
+  ComponentDb(offerDb, "Хранилище предложений", "PostgreSQL", "", $tags="new")
+}
+
+Container_Boundary(conv, "Кредитный конвейер (Camunda, Java)") {
+  Component(inbound, "Приём онлайн-заявок", "Spring Kafka", "Создаёт процесс без суточного обмена, отвергает повторы", $tags="new")
+  Component(bpmn, "Процессы заявки", "BPMN", "Сайт по БКИ, предодобренная заявка, обычная заявка", $tags="changed")
+  Component(worklist, "Очередь менеджера", "Camunda Tasklist", "Предодобренные заявки с приоритетом", $tags="changed")
+  Component(publisher, "Публикатор событий", "Spring Kafka", "Условия, статусы, результаты скоринга", $tags="new")
+}
+
+Container(scoring, "Система кредитного скоринга", "Python, Flask", "Режимы: только БКИ и упрощённый", $tags="changed")
+System_Ext(bki, "Бюро кредитных историй", "REST API", $tags="ext")
+Container(absInt, "Сервис интеграции кредитов", "Java, Spring Boot", "Копия онлайн-заявки в АБС, продолжение заявки в конвейер. Отдельно от депозитного", $tags="new")
+System(abs, "АБС", "Копия онлайн-заявки, зачисление средств", $tags="changed")
+Person(branch, "Менеджер отделения", "")
+
+Rel_D(site, lb, "UC1–UC3", "REST, HTTPS")
+Rel_D(web, lb, "UC5–UC7", "REST, HTTPS")
+Rel_D(lb, api, "Заявки и условия", "HTTPS")
+Rel_L(api, guard, "UC3, UC7: проверка")
+Rel_D(guard, sms, "Код", "REST")
+Rel_D(api, appStore, "Чтение и запись")
+Rel_D(appStore, sync, "Исходящие события")
+Rel_D(sync, kafka, "UC2, UC3, UC7: заявки", "Kafka")
+Rel_U(kafka, sms, "UC2, UC9: приглашение, статусы", "Kafka")
+
+Rel_R(api, offerApi, "UC6: предложение клиента", "REST")
+Rel_D(offerApi, offerDb, "Читает")
+Rel_U(offerCalc, offerDb, "Сохраняет")
+Rel_U(offerConsumer, offerCalc, "Результат")
+Rel_R(kafka, offerConsumer, "UC6: результаты скоринга", "Kafka")
+
+Rel_D(kafka, inbound, "UC2, UC3, UC7: заявки", "Kafka")
+Rel_D(inbound, bpmn, "Запускает процесс")
+Rel_U(worklist, bpmn, "Решение менеджера")
+Rel_U(crManager, worklist, "UC8")
+Rel_L(bpmn, publisher, "Изменения")
+Rel_U(publisher, kafka, "UC1, UC5, UC9, результаты скоринга", "Kafka")
+Rel_D(bpmn, scoring, "UC3, UC7: скоринг", "REST")
+Rel_R(scoring, bki, "UC3, UC7", "REST")
+
+Rel_D(kafka, absInt, "UC4: копия онлайн-заявки", "Kafka")
+Rel_U(absInt, kafka, "UC4: продолжение заявки", "Kafka")
+Rel_D(absInt, abs, "UC4: копия заявки и её продолжение", "JDBC, с лимитом")
+Rel_U(branch, abs, "UC4: находит заявку, проверяет документы")
+Rel_R(bpmn, abs, "UC10: решение раз в сутки", "Текущий обмен через БД")
+
+SHOW_LEGEND()
+@enduml

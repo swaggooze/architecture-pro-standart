@@ -1,0 +1,46 @@
+@startuml c4-context-deposit-mvp
+!include <C4/C4_Context>
+
+title Открытие депозитов онлайн, MVP: диаграмма контекста (C4, уровень 1)
+
+AddElementTag("changed", $bgColor="#1F5AC8", $fontColor="#FFFFFF", $borderColor="#123B86", $legendText="Система, которая меняется в MVP")
+AddElementTag("same", $bgColor="#8A8A8A", $fontColor="#FFFFFF", $borderColor="#5E5E5E", $legendText="Система банка без изменений")
+AddElementTag("ext", $bgColor="#6B4E9B", $fontColor="#FFFFFF", $borderColor="#4A3570", $legendText="Внешняя система")
+
+Person(newClient, "Новый клиент", "Ещё не клиент банка")
+Person(client, "Клиент банка", "Пользователь интернет-банка")
+Person(operator, "Оператор кол-центра", "")
+Person(branch, "Менеджер отделения", "Фронт-офис")
+Person(depManager, "Менеджер депозитов", "Бэк-офис")
+Person(crManager, "Менеджер кредитов", "Бэк-офис")
+
+System(site, "Сайт", "Каталог депозитов и форма заявки", $tags="changed")
+System(ib, "Интернет-банк", "Депозиты, заявки, СМС-коды. Новые сервисы рядом с монолитом", $tags="changed")
+System(cc, "Система кол-центра", "Заявки с сайта и обращения", $tags="changed")
+System(abs, "АБС", "Ставки, заявки, согласование, открытие депозита", $tags="changed")
+System(gw, "СМС-шлюз", "", $tags="same")
+System_Ext(tel, "Телеком-оператор", "Доставка СМС", $tags="ext")
+
+Lay_R(newClient, client)
+Lay_R(client, branch)
+Lay_R(branch, depManager)
+Lay_R(depManager, crManager)
+
+Rel_D(newClient, site, "UC1, UC2: смотрит депозиты, оставляет заявку", "HTTPS")
+Rel_D(site, ib, "UC1, UC2: каталог, заявка", "REST, HTTPS")
+Rel_D(client, ib, "UC6, UC7: смотрит ставки, подаёт заявку, вводит код", "HTTPS")
+Rel_R(ib, abs, "UC5–UC9: ставки, заявки, статусы", "Kafka")
+Rel_D(branch, abs, "UC4: идентифицирует клиента, открывает депозит")
+Rel_D(depManager, abs, "UC5, UC8: ведёт ставки, обрабатывает заявки")
+Rel_D(crManager, abs, "UC5: параметры риска для ставок")
+
+Rel_D(ib, cc, "UC3: заявки с сайта", "Kafka")
+Rel_U(cc, abs, "UC3, UC4: обращение, особые условия", "Текущая интеграция")
+Rel_U(operator, cc, "UC3: обрабатывает заявку, звонит клиенту")
+
+Rel_D(ib, gw, "UC7, UC9: коды и уведомления", "Протокол шлюза")
+Rel_L(gw, tel, "СМС")
+Rel_U(tel, client, "UC7, UC9: СМС")
+
+SHOW_LEGEND()
+@enduml
