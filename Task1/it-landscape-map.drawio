@@ -1,0 +1,289 @@
+<mxfile host="drawio-plugin" modified="2026-11-06T17:33:48.283Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" etag="Yqa35uOpAvhMtznzyOYw" version="22.1.22" type="embed">
+  <diagram name="Карта IT-ландшафта" id="Карта IT-ландшафта">
+    <mxGraphModel dx="832" dy="714" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1304" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c2" value="&lt;b&gt;Банк «Стандарт»: карта текущего IT-ландшафта&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="30" y="24" width="1100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="Продажи и маркетинг" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#1F5AC8;strokeColor=#1F5AC8;fontColor=#FFFFFF;fontStyle=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="245" y="90" width="570" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="Поддержка операционных процессов" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#1F5AC8;strokeColor=#1F5AC8;fontColor=#FFFFFF;fontStyle=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="815" y="90" width="570" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="Продажи&lt;br&gt;в сети отделений" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#E6E6E6;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="245" y="134" width="190" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" value="Продажи&lt;br&gt;через кол-центр" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#E6E6E6;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="435" y="134" width="190" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" value="Digital-оповещения&lt;br&gt;клиентов" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#E6E6E6;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="625" y="134" width="190" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" value="Обслуживание&lt;br&gt;депозитных процессов" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#E6E6E6;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="815" y="134" width="190" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" value="Обслуживание&lt;br&gt;кредитных процессов" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#E6E6E6;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1005" y="134" width="190" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" value="Управление&lt;br&gt;договорами" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#E6E6E6;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1195" y="134" width="190" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" value="&lt;b&gt;Управление обслуживанием в сети отделений&lt;/b&gt;&lt;br&gt;фронт-офис, 50 отделений, 500 чел." style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#F0F0F0;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="30" y="190" width="215" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="245" y="190" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" value="АБС&lt;br&gt;оформление депозита" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="253" y="198" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="435" y="190" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="625" y="190" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="815" y="190" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c18" value="АБС&lt;br&gt;создание депозита" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="823" y="198" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c19" value="Почта&lt;br&gt;запрос ставки в бэк-офис" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#F8CECC;strokeColor=#B85450;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="823" y="250" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c20" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1005" y="190" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c21" value="АБС&lt;br&gt;ввод заявки на кредит" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="1013" y="198" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1195" y="190" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c23" value="АБС&lt;br&gt;загрузка подписанных документов" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="1203" y="198" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c24" value="&lt;b&gt;Кол-центр банка&lt;/b&gt;&lt;br&gt;200 операторов" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#F0F0F0;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="30" y="302" width="215" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c25" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="245" y="302" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c26" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="435" y="302" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c27" value="Система кол-центра&lt;br&gt;звонки" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="443" y="310" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c28" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="625" y="302" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c29" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="815" y="302" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c30" value="Система кол-центра&lt;br&gt;обращение по депозиту" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="823" y="310" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c31" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1005" y="302" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c32" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1195" y="302" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c33" value="&lt;b&gt;Партнёрский кол-центр&lt;/b&gt;&lt;br&gt;внешняя компания, 100 чел." style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#F0F0F0;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="30" y="362" width="215" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c34" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="245" y="362" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c35" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="435" y="362" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c36" value="Система партнёрского кол-центра" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="443" y="370" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c37" value="Скрипты звонков&lt;br&gt;передаются вручную" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#F8CECC;strokeColor=#B85450;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="443" y="422" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c38" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="625" y="362" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c39" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="815" y="362" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c40" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1005" y="362" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c41" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1195" y="362" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c42" value="&lt;b&gt;Управление обслуживанием депозитных продуктов&lt;/b&gt;&lt;br&gt;бэк-офис, 50 чел." style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#F0F0F0;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="30" y="474" width="215" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c43" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="245" y="474" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c44" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="435" y="474" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c45" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="625" y="474" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c46" value="АБС&lt;br&gt;СМС о согласованной ставке" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="633" y="482" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c47" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="815" y="474" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c48" value="АБС&lt;br&gt;заявки, ставка по заявке" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="823" y="482" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c49" value="Excel + почта&lt;br&gt;ставки, специальные ставки" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#F8CECC;strokeColor=#B85450;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="823" y="534" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c50" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1005" y="474" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c51" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1195" y="474" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c52" value="&lt;b&gt;Управление обслуживанием кредитных продуктов&lt;/b&gt;&lt;br&gt;бэк-офис, 50 чел." style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#F0F0F0;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="30" y="586" width="215" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="c53" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="245" y="586" width="190" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="c54" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="435" y="586" width="190" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="c55" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="625" y="586" width="190" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="c56" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="815" y="586" width="190" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="c57" value="АБС&lt;br&gt;кредитный риск по клиенту" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="823" y="594" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c58" value="Excel + почта&lt;br&gt;ежедневный расчёт ставок" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#F8CECC;strokeColor=#B85450;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="823" y="646" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c59" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1005" y="586" width="190" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="c60" value="Кредитный конвейер&lt;br&gt;обработка заявок" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="1013" y="594" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c61" value="Система кредитного скоринга" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="1013" y="646" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c62" value="Бюро кредитных историй&lt;br&gt;через скоринг" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="1013" y="698" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c63" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1195" y="586" width="190" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="c64" value="Кредитный конвейер&lt;br&gt;номера платежей к договору" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="1203" y="594" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c65" value="&lt;b&gt;Управление IT&lt;/b&gt;&lt;br&gt;интернет-банк 10 + 10 у подрядчика, АБС 20 чел." style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#F0F0F0;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="30" y="750" width="215" height="216" as="geometry" />
+        </mxCell>
+        <mxCell id="c66" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="245" y="750" width="190" height="216" as="geometry" />
+        </mxCell>
+        <mxCell id="c67" value="АБС" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="253" y="758" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c68" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="435" y="750" width="190" height="216" as="geometry" />
+        </mxCell>
+        <mxCell id="c69" value="Система кол-центра&lt;br&gt;подрядчик, 5 чел. + специалисты АБС" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="443" y="758" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c70" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="625" y="750" width="190" height="216" as="geometry" />
+        </mxCell>
+        <mxCell id="c71" value="Сайт" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="633" y="758" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c72" value="Интернет-банк&lt;br&gt;платформа подрядчика" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="633" y="810" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c73" value="СМС-шлюз" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="633" y="862" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c74" value="Телеком-оператор" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="633" y="914" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c75" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="815" y="750" width="190" height="216" as="geometry" />
+        </mxCell>
+        <mxCell id="c76" value="АБС" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="823" y="758" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c77" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1005" y="750" width="190" height="216" as="geometry" />
+        </mxCell>
+        <mxCell id="c78" value="АБС" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="1013" y="758" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c79" value="Кредитный конвейер&lt;br&gt;вместе с подрядчиком" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="1013" y="810" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c80" value="Система кредитного скоринга" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="1013" y="862" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c81" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1195" y="750" width="190" height="216" as="geometry" />
+        </mxCell>
+        <mxCell id="c82" value="АБС" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="1203" y="758" width="174" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c83" value="&lt;b&gt;Команда цифровой трансформации розничного бизнеса&lt;/b&gt;&lt;br&gt;10 чел." style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#F0F0F0;strokeColor=#BDBDBD;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="30" y="966" width="215" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="c84" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;rounded=0;fillColor=#FFFFFF;strokeColor=#D0D0D0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="245" y="966" width="1140" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="c85" value="&lt;b&gt;Обозначения&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="30" y="1074" width="245" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c86" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="30" y="1098" width="26" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c87" value="Система банка" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="62" y="1095" width="213" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c88" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="30" y="1124" width="26" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c89" value="Платформа или коробка подрядчика" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="62" y="1121" width="213" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c90" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="30" y="1150" width="26" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c91" value="Внешняя система" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="62" y="1147" width="213" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c92" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=center;verticalAlign=middle;fillColor=#F8CECC;strokeColor=#B85450;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="30" y="1176" width="26" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c93" value="Ручная работа без системы" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="62" y="1173" width="213" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c94" value="&lt;b&gt;Кредитный процесс на карте&lt;/b&gt;&lt;br&gt;1. Менеджер отделения вводит заявку в АБС. Подать её можно только в отделении.&lt;br&gt;2. Раз в сутки заявка попадает из АБС в Кредитный конвейер через БД.&lt;br&gt;3. Менеджер кредитов работает с заявкой в конвейере, тот вызывает скоринг. Скоринг берёт данные БКИ онлайн, а данные АБС и конвейера раз в сутки.&lt;br&gt;4. Менеджер принимает решение. Раз в сутки оно уходит в АБС, и там зачисляются средства." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="295" y="1074" width="480" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="c95" value="&lt;b&gt;Что мешает сделать депозит цифровым продуктом&lt;/b&gt;&lt;br&gt;• Ставки живут в Excel и ходят по почте: их негде взять онлайн.&lt;br&gt;• Специальные ставки согласуют письмами между тремя подразделениями.&lt;br&gt;• Вся работа с депозитом идёт в АБС, а интернет-банк подключён напрямую к её БД.&lt;br&gt;• В карте возможностей нет онлайн-продаж. Сайт и интернет-банк показаны в ближайшей колонке «Digital-оповещения», а не в отдельной: это допущение автора.&lt;br&gt;• Партнёрский кол-центр не связан с системами банка." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="795" y="1074" width="590" height="210" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

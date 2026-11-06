@@ -1,0 +1,30 @@
+@startuml c4-context-rates-call-center
+!include <C4/C4_Context>
+
+title Передача ставок в кол-центры: диаграмма контекста (C4, уровень 1)
+
+AddElementTag("changed", $bgColor="#1F5AC8", $fontColor="#FFFFFF", $borderColor="#123B86", $legendText="Система, которая меняется")
+AddElementTag("new", $bgColor="#1E8449", $fontColor="#FFFFFF", $borderColor="#14572F", $legendText="Новая система")
+AddElementTag("ext", $bgColor="#6B4E9B", $fontColor="#FFFFFF", $borderColor="#4A3570", $legendText="Внешняя система")
+
+Person(client, "Клиент", "Звонит, чтобы узнать условия депозита")
+Person(operator, "Оператор кол-центра", "Сотрудник банка")
+Person(partnerOp, "Оператор партнёрского кол-центра", "Сотрудник партнёра")
+Person(depManager, "Менеджер депозитов", "Бэк-офис")
+
+System(abs, "АБС", "Ведёт ставки. Сервис интеграции публикует изменения и формирует файл", $tags="changed")
+System(cc, "Система кол-центра", "Показывает ставки оператору", $tags="changed")
+System(sftp, "SFTP-сервер банка", "Отдаёт партнёру файл со ставками. Размещён в DMZ", $tags="new")
+System_Ext(partner, "Система партнёрского кол-центра", "Загружает файл и показывает ставки операторам", $tags="ext")
+
+Rel_D(depManager, abs, "UC1: утверждает ставки")
+Rel_D(abs, cc, "UC1, UC2: события об изменении ставок", "Kafka")
+Rel_D(abs, sftp, "UC3: файл со ставками", "SFTP")
+Rel_U(partner, sftp, "UC3: забирает файл", "SFTP, ключ, список IP")
+Rel_U(operator, cc, "UC2: смотрит ставки")
+Rel_U(partnerOp, partner, "UC4: смотрит ставки")
+Rel_U(client, operator, "UC2: звонит")
+Rel_U(client, partnerOp, "UC4: звонит, если линия передана партнёру")
+
+SHOW_LEGEND()
+@enduml

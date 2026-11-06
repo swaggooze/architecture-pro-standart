@@ -1,0 +1,54 @@
+@startuml c4-component-rates-call-center
+!include <C4/C4_Component>
+
+title Передача ставок в кол-центры: диаграмма компонентов (C4, уровень 3)
+
+AddElementTag("new", $bgColor="#1E8449", $fontColor="#FFFFFF", $borderColor="#14572F", $legendText="Новый компонент")
+AddElementTag("same", $bgColor="#8A8A8A", $fontColor="#FFFFFF", $borderColor="#5E5E5E", $legendText="Уже есть в MVP или в системе")
+AddElementTag("ext", $bgColor="#6B4E9B", $fontColor="#FFFFFF", $borderColor="#4A3570", $legendText="Внешняя система")
+
+Person(operator, "Оператор кол-центра", "")
+Person(partnerOp, "Оператор партнёра", "")
+
+ContainerDb(absDb, "БД АБС", "Oracle, PL/SQL", "Ставки и исходящие события", $tags="same")
+ContainerQueue(kafka, "Kafka", "Топик ставок deposit.rates", "Хранит последнее значение по каждому продукту", $tags="same")
+System_Ext(partner, "Система партнёрского кол-центра", "Партнёр дорабатывает загрузку и показ файла", $tags="ext")
+Container(monitor, "Мониторинг", "Метрики, оповещения", "Появляется вместе с MVP. Оповещает о задержке файла и данных", $tags="new")
+
+Container_Boundary(int, "Сервис интеграции депозитов") {
+  Component(reader, "Чтение исходящих событий", "Spring Boot", "Читает изменения ставок из БД АБС", $tags="same")
+  Component(publisher, "Публикатор ставок", "Spring Kafka", "Публикует ставки с датой действия", $tags="same")
+  Component(fileConsumer, "Подписчик на ставки", "Spring Kafka", "Хранит последний снимок базовых ставок", $tags="new")
+  Component(builder, "Формирователь файла", "Spring Boot", "Собирает CSV: версия, дата действия, контрольная сумма", $tags="new")
+  Component(uploader, "Загрузчик на SFTP", "Spring Integration", "Пишет во временный файл и переименовывает, повторяет при ошибке", $tags="new")
+}
+
+Container(sftp, "SFTP-сервер", "OpenSSH, DMZ, два узла", "Хранит файлы 7 дней, доступ по ключу и списку IP", $tags="new")
+
+Container_Boundary(cc, "Система кол-центра") {
+  Component(ccConsumer, "Подписчик на ставки", "Spring Kafka", "Получает изменения из топика", $tags="new")
+  ComponentDb(ccDb, "Таблица ставок", "PostgreSQL", "Актуальные ставки с датой обновления", $tags="new")
+  Component(ccApi, "API ставок", "Spring Boot", "Отдаёт ставки веб-интерфейсу", $tags="new")
+  Component(ccUi, "Виджет ставок", "React.js", "Показывает ставки и предупреждает об устаревании", $tags="new")
+}
+
+Rel_D(absDb, reader, "Изменения ставок", "JDBC, с лимитом")
+Rel_D(reader, publisher, "Ставки")
+Rel_D(publisher, kafka, "UC1: публикует", "Kafka")
+
+Rel_D(kafka, fileConsumer, "UC1", "Kafka")
+Rel_D(fileConsumer, builder, "Снимок при изменении и по расписанию")
+Rel_D(builder, uploader, "Файл")
+Rel_D(uploader, sftp, "UC3: выкладывает файл", "SFTP")
+Rel_D(uploader, monitor, "UC5: ошибка или\nзадержка выгрузки")
+Rel_U(partner, sftp, "UC3: забирает файл", "SFTP")
+Rel_U(partnerOp, partner, "UC4: смотрит ставки")
+
+Rel_D(kafka, ccConsumer, "UC2", "Kafka")
+Rel_D(ccConsumer, ccDb, "Обновляет")
+Rel_U(ccApi, ccDb, "Читает")
+Rel_U(ccUi, ccApi, "Запрашивает ставки", "REST")
+Rel_U(operator, ccUi, "UC2: смотрит ставки")
+
+SHOW_LEGEND()
+@enduml
